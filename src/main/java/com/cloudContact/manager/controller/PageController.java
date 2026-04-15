@@ -14,4 +14,10 @@ public class PageController {
         model.addAttribute("age", "20");
         return "home";
     }
+
+    @RequestMapping("/about")
+    public String about() {
+        System.out.println("-----------About Page Handler----------");
+        return "about";
+    }
 }
