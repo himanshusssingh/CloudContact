@@ -2,6 +2,7 @@ package com.cloudContact.manager.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -19,5 +20,11 @@ public class PageController {
     public String about() {
         System.out.println("-----------About Page Handler----------");
         return "about";
+    }
+
+    @GetMapping("/signup")
+    public String signup() {
+        System.out.println("-----------Signup Page Handler----------");
+        return "signup";
     }
 }

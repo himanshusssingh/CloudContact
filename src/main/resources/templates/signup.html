@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title})}">
+<head>
+    <title>Cloud Contact - Signup</title>
+</head>
+<body>
+    <div id="content">
+        <h1 class="text-danger text-center">Signup</h1>
+        <p class="text-center">Welcome to the signup page of Cloud Contact!</p>
+        <form action="">
+            <div class=" mb-3">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-control" type="text" id="name" name="name" placeholder="Enter your Name:">
+            </div>
+
+            <div class=" mb-3">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" type="email" id="email" name="email" placeholder="Enter your Email:">
+            </div>
+
+            <div class=" mb-3">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-control" type="password" id="password" name="password" placeholder="Enter your Password:">
+            </div>
+
+            <div class=" mb-3">
+                <label class="form-label" for="phone">Phone no.</label>
+                <input class="form-control" type="text" id="phone" name="phone" placeholder="Enter your Phone no:">
+            </div>            
+
+            <div class=" mb-3">
+                <label class="form-label" for="about">About</label>
+                <textarea class="form-control" id="about" name="about" placeholder="Tell us about yourself:"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Signup</button>
+        </form>
+    </div>
+</body>
+</html>
