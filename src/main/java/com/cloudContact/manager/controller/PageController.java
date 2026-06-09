@@ -3,7 +3,11 @@ package com.cloudContact.manager.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.cloudContact.manager.form.UserForm;
 
 @Controller
 public class PageController {
@@ -27,4 +31,12 @@ public class PageController {
         System.out.println("-----------Signup Page Handler----------");
         return "signup";
     }
+
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public String signupHandler(@ModelAttribute UserForm userForm) {
+        System.out.println("-----------Signup Handler----------");
+        System.out.println(userForm);
+        return "redirect:/home";
+    }
+
 }
